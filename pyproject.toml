@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "pytorch-tutorials-gan"
+name = "gan-mnist"
 version = "0.1.0"
 description = ""
 authors = ["Hiromasa Kato <hiromasa@gmail.com>"]
