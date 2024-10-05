@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "pytorch-tutorials-gan"
+version = "0.1.0"
+description = ""
+authors = ["Hiromasa Kato <hiromasa@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+torch = "^2.4.1"
+torchvision = "^0.19.1"
+matplotlib = "^3.9.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
