@@ -6,6 +6,7 @@ from torch.utils.data import DataLoader
 import torchvision 
 from torchvision.transforms import v2
 
+
 class Discriminator(nn.Module):
 
     def __init__(self, img_size=28, hidden_size=64):
@@ -164,5 +165,13 @@ def test_generator(weights_path):
 
 
 if __name__ == "__main__":
-    #train(None, 0.001, 0.001, 500)
-    test_generator("cg.pth")
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("op", help="train|visualize")
+    args = parser.parse_args()
+    if args.op == "train":
+        train(None, 0.001, 0.001, 500)
+    elif args.op == "visualize":
+        test_generator("cg.pth")
+    else:
+        parser.print_help()

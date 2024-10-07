@@ -149,5 +149,13 @@ def test_generator(weights_path):
 
 
 if __name__ == "__main__":
-    #train(None, 0.001, 0.001, 500)
-    test_generator("g.pth")
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("op", help="train|visualize")
+    args = parser.parse_args()
+    if args.op == "train":
+        train(None, 0.001, 0.001, 500)
+    elif args.op == "visualize":
+        test_generator("g.pth")
+    else:
+        parser.print_help()
